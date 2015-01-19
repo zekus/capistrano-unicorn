@@ -2,9 +2,7 @@ module CapistranoUnicorn
   module Utility
 
     def local_unicorn_config
-      File.exist?(unicorn_config_rel_file_path) ?
-          unicorn_config_rel_file_path
-        : unicorn_config_stage_rel_file_path
+      File.exist?(unicorn_config_rel_file_path) ? unicorn_config_rel_file_path : unicorn_config_stage_rel_file_path
     end
 
     def extract_pid_file
